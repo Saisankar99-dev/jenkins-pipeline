@@ -21,20 +21,16 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Set Node.js version (same as in your Jenkins example)
+          node-version: '18'  # Set Node.js version to 18
 
-      # Step 3: Install dependencies (e.g., Mocha for testing, if needed)
+      # Step 3: Install dependencies (including Mocha if needed)
       - name: Install dependencies
-        run: |
-          npm install
+        run: npm install
 
-      # Step 4: Run the JavaScript file
+      # Step 4: Run the JavaScript script
       - name: Run JavaScript script
-        run: |
-          node script.js  # Replace with the name of your JavaScript file
+        run: node script.js  # Replace with the name of your JavaScript file
 
-      # Optional: Step 5 (if you have tests): Run tests (e.g., Mocha)
+      # Step 5: Run tests (if Mocha is required)
       - name: Run tests
-        run: |
-          npm install mocha  # If you want to run tests
-          mocha name.js  # Run Mocha tests on your JavaScript file
+        run: npx mocha name.js  # Run Mocha tests on your JavaScript file
