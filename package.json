@@ -1,0 +1,23 @@
+{
+  "name": "jenkins-pipeline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saisankar99-dev/jenkins-pipeline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saisankar99-dev/jenkins-pipeline/issues"
+  },
+  "homepage": "https://github.com/Saisankar99-dev/jenkins-pipeline#readme",
+  "devDependencies": {
+    "mocha": "^11.0.1"
+  }
+}
