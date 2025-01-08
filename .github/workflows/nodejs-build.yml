@@ -1,0 +1,40 @@
+name: Node.js Build and Test
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when changes are pushed to the 'main' branch
+  pull_request:
+    branches:
+      - main  # Trigger the workflow for pull requests targeting 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Run the job on an Ubuntu environment
+
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Set Node.js version (same as in your Jenkins example)
+
+      # Step 3: Install dependencies (e.g., Mocha for testing, if needed)
+      - name: Install dependencies
+        run: |
+          npm install
+
+      # Step 4: Run the JavaScript file
+      - name: Run JavaScript script
+        run: |
+          node name.js  # Replace with the name of your JavaScript file
+
+      # Optional: Step 5 (if you have tests): Run tests (e.g., Mocha)
+      - name: Run tests
+        run: |
+          npm install mocha  # If you want to run tests
+          mocha name.js  # Run Mocha tests on your JavaScript file
