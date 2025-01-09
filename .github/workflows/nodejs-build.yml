@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Run the job on an Ubuntu environment
+    runs-on: slef-hosted  # Run the job on an Ubuntu environment
 
     steps:
       # Step 1: Checkout the repository
