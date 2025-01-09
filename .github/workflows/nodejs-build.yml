@@ -10,7 +10,8 @@ on:
 
 jobs:
   build:
-    runs-on: slef-hosted  # Run the job on an Ubuntu environment
+    runs-on: self-hosted
+  # Run the job on an Ubuntu environment
 
     steps:
       # Step 1: Checkout the repository
